@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://www.gatheringbeauty.com/s/Pink-Heart-Desktop-Wallpaper.png');
+}
+
+.container {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  display: none;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.clickable-gif {
+  cursor: pointer;
+    z-index: 10;
+    width: 300px;
+}
+
+.preview {
+  align-items: center;
+  justify-content: baseline;
+  display: flex;
+}
+
+/* Кнопки */
+label.button {
+  background: #3498db;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+label.button:hover {
+  background: #2980b9;
+}
+
+/* Секции контента */
+.content {
+  display: none;
+  margin-top: 15px;
+  transition: all 0.5s;
+}
+
+/* Показ выбранной секции */
+#step1:checked ~ .content1,
+#step2:checked ~ .content2,
+#step3:checked ~ .content3 {
+  display: block;
+}
+
+/* Эффект печатающей машинки */
+.content p {
+  overflow: visible; /* Скрывает текст, который ещё не напечатан */
+  border-right: 2px solid #fff; /* Мигающий курсор */
+  white-space: pre-wrap; /* Текст в одну линию */
+  word-wrap: break-word;
+  margin: 0 auto;
+}
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+    
+}
+/* Анимация печати */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Мигающий курсор */
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+img {
+  width: 150px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
